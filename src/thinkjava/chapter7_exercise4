@@ -1,0 +1,25 @@
+package com.company;
+
+import java.util.Arrays; //ikke helt sikker på om den her er nødvendig
+
+public class Main {
+
+    public static void main(String[] args) {
+
+       boolean [] findPrimenumbers = sieve(10);
+    }
+
+
+
+    
+ 
+
+    public static boolean[] sieve(int n){   // Takes an integer parameter n, and returns a boolean array that indicates, for each number from 0 to n - 1, whether the number is prime.  
+        boolean [] prime = new boolean[n-1];//define "prime" as boolean (true/false) and as array and its length
+        for (int i = 0 ; i < n-1; i++){     //for loop, counting one less than n
+            int test = i%2;                 //dividing by two, and leaving a reminder if any
+            if (test == 0 ){                //testing for reminders
+                prime[i] = true;            //prime is by default false. Changing to true if it's a prime-number
+            }
+        }return prime;
+    }
